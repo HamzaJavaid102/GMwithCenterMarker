@@ -13,6 +13,12 @@
 		048CEDCC2885B349000419A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CEDCA2885B349000419A4 /* Main.storyboard */; };
 		048CEDCE2885B34C000419A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048CEDCD2885B34C000419A4 /* Assets.xcassets */; };
 		048CEDD12885B34C000419A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048CEDCF2885B34C000419A4 /* LaunchScreen.storyboard */; };
+		048CEDD92885C625000419A4 /* AddressChosseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CEDD82885C625000419A4 /* AddressChosseController.swift */; };
+		048CEDDB2885C687000419A4 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CEDDA2885C687000419A4 /* BaseController.swift */; };
+		048CEDDD2885C6AD000419A4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CEDDC2885C6AD000419A4 /* CustomButton.swift */; };
+		048CEDDF2885C788000419A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CEDDE2885C788000419A4 /* Constants.swift */; };
+		048CEDE12885C7A6000419A4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048CEDE02885C7A6000419A4 /* Colors.swift */; };
+		9D81D06BBC65BEBFD44CC48F /* Pods_GMwithCenterMarker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7D7466BE7CD787B48499F4 /* Pods_GMwithCenterMarker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		048CEDCD2885B34C000419A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048CEDD02885B34C000419A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048CEDD22885B34C000419A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048CEDD82885C625000419A4 /* AddressChosseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressChosseController.swift; sourceTree = "<group>"; };
+		048CEDDA2885C687000419A4 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		048CEDDC2885C6AD000419A4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		048CEDDE2885C788000419A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		048CEDE02885C7A6000419A4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6421A30FBF2A893326E60684 /* Pods-GMwithCenterMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMwithCenterMarker.release.xcconfig"; path = "Target Support Files/Pods-GMwithCenterMarker/Pods-GMwithCenterMarker.release.xcconfig"; sourceTree = "<group>"; };
+		AF7D7466BE7CD787B48499F4 /* Pods_GMwithCenterMarker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GMwithCenterMarker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33B0C568476CEADB10CE191 /* Pods-GMwithCenterMarker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GMwithCenterMarker.debug.xcconfig"; path = "Target Support Files/Pods-GMwithCenterMarker/Pods-GMwithCenterMarker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D81D06BBC65BEBFD44CC48F /* Pods_GMwithCenterMarker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				048CEDC32885B349000419A4 /* GMwithCenterMarker */,
 				048CEDC22885B349000419A4 /* Products */,
+				1E4448DB312EB0F53458F58F /* Pods */,
+				F041C72FF62B09051520DA8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +75,35 @@
 			children = (
 				048CEDC42885B349000419A4 /* AppDelegate.swift */,
 				048CEDC62885B349000419A4 /* SceneDelegate.swift */,
+				048CEDD82885C625000419A4 /* AddressChosseController.swift */,
+				048CEDDA2885C687000419A4 /* BaseController.swift */,
 				048CEDC82885B349000419A4 /* ViewController.swift */,
 				048CEDCA2885B349000419A4 /* Main.storyboard */,
 				048CEDCD2885B34C000419A4 /* Assets.xcassets */,
 				048CEDCF2885B34C000419A4 /* LaunchScreen.storyboard */,
 				048CEDD22885B34C000419A4 /* Info.plist */,
+				048CEDDC2885C6AD000419A4 /* CustomButton.swift */,
+				048CEDE02885C7A6000419A4 /* Colors.swift */,
+				048CEDDE2885C788000419A4 /* Constants.swift */,
 			);
 			path = GMwithCenterMarker;
+			sourceTree = "<group>";
+		};
+		1E4448DB312EB0F53458F58F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B33B0C568476CEADB10CE191 /* Pods-GMwithCenterMarker.debug.xcconfig */,
+				6421A30FBF2A893326E60684 /* Pods-GMwithCenterMarker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F041C72FF62B09051520DA8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7D7466BE7CD787B48499F4 /* Pods_GMwithCenterMarker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048CEDD52885B34C000419A4 /* Build configuration list for PBXNativeTarget "GMwithCenterMarker" */;
 			buildPhases = (
+				DF271DC6DEF3DAAE3D514A58 /* [CP] Check Pods Manifest.lock */,
 				048CEDBD2885B349000419A4 /* Sources */,
 				048CEDBE2885B349000419A4 /* Frameworks */,
 				048CEDBF2885B349000419A4 /* Resources */,
+				4658AB416A40727761DEBA0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,14 +174,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4658AB416A40727761DEBA0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMwithCenterMarker/Pods-GMwithCenterMarker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GMwithCenterMarker/Pods-GMwithCenterMarker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GMwithCenterMarker/Pods-GMwithCenterMarker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF271DC6DEF3DAAE3D514A58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GMwithCenterMarker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		048CEDBD2885B349000419A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				048CEDC92885B349000419A4 /* ViewController.swift in Sources */,
+				048CEDE12885C7A6000419A4 /* Colors.swift in Sources */,
 				048CEDC52885B349000419A4 /* AppDelegate.swift in Sources */,
+				048CEDDD2885C6AD000419A4 /* CustomButton.swift in Sources */,
+				048CEDDB2885C687000419A4 /* BaseController.swift in Sources */,
+				048CEDDF2885C788000419A4 /* Constants.swift in Sources */,
 				048CEDC72885B349000419A4 /* SceneDelegate.swift in Sources */,
+				048CEDD92885C625000419A4 /* AddressChosseController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		048CEDD62885B34C000419A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33B0C568476CEADB10CE191 /* Pods-GMwithCenterMarker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,9 +381,9 @@
 				INFOPLIST_FILE = GMwithCenterMarker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +399,7 @@
 		};
 		048CEDD72885B34C000419A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6421A30FBF2A893326E60684 /* Pods-GMwithCenterMarker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,9 +410,9 @@
 				INFOPLIST_FILE = GMwithCenterMarker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,7 +12,7 @@ class BaseController: UIViewController {
     
     lazy var headerotop : UIView = {
         let view = UIView()
-        view.backgroundColor = headerTop()
+        view.backgroundColor = primaryColor()
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -22,7 +22,7 @@ class BaseController: UIViewController {
         let view = UIView()
         view.backgroundColor = primaryColor()
         view.clipsToBounds = true
-        view.isHidden = true
+        view.isHidden = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -41,7 +41,7 @@ class BaseController: UIViewController {
     lazy var baseHeadingeadingLbl: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.font = semiBold(size: 14)
+        lbl.font = UIFont.boldSystemFont(ofSize: 16)
         lbl.textColor = UIColor.white
         lbl.text = ""
         lbl.numberOfLines = 1

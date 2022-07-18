@@ -1,0 +1,6 @@
+framework module Pods_GMwithCenterMarker {
+  umbrella header "Pods-GMwithCenterMarker-umbrella.h"
+
+  export *
+  module * { export * }
+}

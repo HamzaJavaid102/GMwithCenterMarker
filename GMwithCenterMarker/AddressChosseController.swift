@@ -23,7 +23,8 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
     lazy var saveBtn : CustomButton = {
         let btn = CustomButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Save".localized, for: .normal)
+        btn.setTitle("Save", for: .normal)
+  
         btn.addTarget(self, action: #selector(doneBtn), for: .touchUpInside)
         return btn
     }()
@@ -35,6 +36,7 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
         btn.backgroundColor = .clear
         btn.layer.shadowColor = UIColor.clear.cgColor
         btn.tintColor = .white
+        btn.isHidden  = true
         btn.addTarget(self, action: #selector(curreLocationBtn_press), for: .touchUpInside)
         return btn
     }()
@@ -65,29 +67,18 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
     var srcLocationLat: Double! = 0.0
     var srcLocationLng: Double! = 0.0
     var srcAddress = ""
-    var delegate : LocationDelegate?
-    let subView = UIView(frame: CGRect(x: 0, y: 90.0, width: 350.0, height: 45.0))
+    let subView = UIView(frame: CGRect(x: 0, y: 90.0, width: UIScreen.main.bounds.width, height: 45.0))
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        headerView.isHidden  = false
-        baseHeadingeadingLbl.text = "Select Location".localized
+        baseHeadingeadingLbl.text = "Select Location"
         
         resultsViewController = GMSAutocompleteResultsViewController()
-        let filter = GMSAutocompleteFilter()
-//        filter.country = "FI"
-        filter.countries  = ["FI","PK"]
-     
-        resultsViewController?.autocompleteFilter = filter
-            resultsViewController?.delegate = self
+        resultsViewController?.delegate = self
         self.navigationController?.navigationBar.isHidden = true
-         /////////////////////////////////
-         // current Loc code of GoogleMap
-         /////////////////////////////////
-         // Do any additional setup after loading the view
-         self.geoCoder = GMSGeocoder()
-         self.marker = GMSMarker()
-         self.initialcameraposition = GMSCameraPosition()
+        self.geoCoder = GMSGeocoder()
+        self.marker = GMSMarker()
+        self.initialcameraposition = GMSCameraPosition()
         
         resultsViewController?.tableCellBackgroundColor = primaryColor()
         resultsViewController?.primaryTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -104,22 +95,16 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
         } else {
             // Fallback on earlier versions
         }
-         searchController?.searchBar.layer.borderColor = UIColor.clear.cgColor
-         searchController?.searchBar.barTintColor =  primaryColor()
+        searchController?.searchBar.layer.borderColor = UIColor.clear.cgColor
+        searchController?.searchBar.barTintColor =  primaryColor()
         subView.addSubview((searchController?.searchBar)!)
         self.view.addSubview(subView)
         searchController?.searchBar.sizeToFit()
         searchController?.hidesNavigationBarDuringPresentation = false
         
-        
-        
-         // Create gms map view
-         mapView.isMyLocationEnabled = true
+         mapView.isMyLocationEnabled = false
          mapView.isBuildingsEnabled = true
- //         mapView.isTrafficEnabled = true
- //         self.view.addSubview(mapView)
-  
-         
+        
          locationManager.delegate = self
          locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
          if locationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization))
@@ -155,8 +140,8 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
             mapView.bottomAnchor.constraint(equalTo: childview.bottomAnchor),
             
             saveBtn.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -8 * appConstant.heightRatio),
-            saveBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16 * appConstant.widthRatio),
-            saveBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16 * appConstant.widthRatio),
+            saveBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70 * appConstant.widthRatio),
+            saveBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70 * appConstant.widthRatio),
             saveBtn.heightAnchor.constraint(equalToConstant: 40 * appConstant.heightRatio),
             
             currentLocationBtn.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
@@ -173,10 +158,9 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
     }
     
     override func baseBackBtn_press() {
-        AppUserDefault.shared.isCurrentLocation = false
-        AppUserDefault.shared.city = self.srcAddress
-        AppUserDefault.shared.cityLat = self.srcLocationLat ?? 0.0
-        AppUserDefault.shared.cityLong = self.srcLocationLng ?? 0.0
+        self.srcAddress
+        self.srcLocationLat ?? 0.0
+        self.srcLocationLng ?? 0.0
         subView.removeFromSuperview()
         subView.isHidden  = true
         
@@ -184,22 +168,16 @@ class AddressChosseController: BaseController,UISearchBarDelegate {
     }
     
     @objc func doneBtn(){
-      
-        AppUserDefault.shared.isCurrentLocation = false
-        AppUserDefault.shared.city = self.srcAddress 
-        AppUserDefault.shared.cityLat = self.srcLocationLat ?? 0.0
-        AppUserDefault.shared.cityLong = self.srcLocationLng ?? 0.0
-        subView.removeFromSuperview()
-        subView.isHidden  = true
-        self.navigationController?.popViewController(animated: true)
+        print(self.srcAddress)
+        print(self.srcLocationLat ?? 0.0)
+        print(self.srcLocationLng ?? 0.0)
     }
     
     @objc func curreLocationBtn_press(){
-      
-        AppUserDefault.shared.isCurrentLocation = true
-        subView.removeFromSuperview()
-        subView.isHidden  = true
-        self.navigationController?.popViewController(animated: true)
+    
+//        subView.removeFromSuperview()
+//        subView.isHidden  = true
+//        self.navigationController?.popViewController(animated: true)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
